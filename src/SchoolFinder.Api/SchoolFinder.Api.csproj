@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<UserSecretsId>d33e66f1-bfd3-41ee-a30b-39cd009a3639</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="7.1.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+	<PackageReference Include="MediatR" Version="12.1.1" />
+	<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolFinder.Application\SchoolFinder.Application.csproj" />
+    <ProjectReference Include="..\SchoolFinder.Domain\SchoolFinder.Domain.csproj" />
+    <ProjectReference Include="..\SchoolFinder.Infra.Data.Dapper\SchoolFinder.Infra.Data.Dapper.csproj" />
+    <ProjectReference Include="..\SchoolFinder.Infra.Messaging\SchoolFinder.Infra.Messaging.csproj" />
+  </ItemGroup>
+
+</Project>
